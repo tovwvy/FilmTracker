@@ -1,0 +1,21 @@
+<!-- app/views/comments/edit.html.erb -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card my-5">
+        <div class="card-body">
+          <%= form_with(model: [ @film, @comment ],url: film_comment_path(@film, @comment), local: true) do |form| %>
+            <%= form.hidden_field :film_id, value: @film.id %>
+            <div class="mb-3">
+              <%= form.label :content, class: "form-label" %>
+              <%= form.text_area :content, class: "form-control", rows: 3 %>
+            </div>
+            <div class="text-end">
+              <%= form.submit "Update Comment", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

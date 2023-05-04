@@ -1,0 +1,19 @@
+<div class="pagination justify-content-center my-3">
+  <%= will_paginate @films %>
+</div>
+
+<div class="container-fluid bg-dark text-white py-4">
+  <h1 class="film-list-text text-center mb-4">List of Films</h1>
+  <ul class="list-group">
+    <% @films.each do |film| %>
+      <li class="list-group-item d-flex justify-content-between align-items-center bg-secondary">
+        <%= link_to("#{film.name} #{film.year}", film_path(film), class: "text-white") %>
+        <%= link_to("Delete", film_path(film), method: :delete, class: "btn btn-danger btn-sm") %>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="d-flex justify-content-center mt-5">
+    <%= link_to "Create new film", new_film_path, class: "btn btn-info btn-lg rounded-pill" %>
+  </div>
+</div>
