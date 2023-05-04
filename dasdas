@@ -1,0 +1,9 @@
+user.name=tovwvy
+user.email=roman.r.tytskyi@ukd.edu.ua
+credential.helper=cache
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/tovwvy/FilmProject.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
